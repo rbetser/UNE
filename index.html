@@ -254,7 +254,7 @@
         <div class="abstract-text">
           <p>
             Generative models and visual encoders are typically studied separately, yet both appear to rely on latent spaces with approximately Gaussian structure.
-            We hypothesize a shared latent source — the Universal Normal Embedding (UNE) — from which encoder embeddings and DDIM-inverted diffusion latents arise as noisy linear projections.
+            We hypothesize a shared latent source, the Universal Normal Embedding (UNE), from which encoder embeddings and generative latents arise as noisy linear projections.
             Across diffusion and encoder spaces, we find aligned linear semantics for attribute prediction and editing, and show that simple geometric operations can mitigate spurious entanglements.
           </p>
         </div>
@@ -281,26 +281,26 @@
         <div class="insights-grid" role="list">
 
           <div class="card-insight">
-            <div class="upper"><h3>Hypothesis 1: A shared Gaussian latent source</h3></div>
+            <div class="upper"><h3>Hypothesis 1: Universal Normal Embedding (UNE)</h3></div>
             <div class="bottom">
-              <div class="left"><img src="misc/hypothesis_shared_source_placeholder.png" alt="Shared Gaussian source illustration"></div>
+              <div class="left"><img src="misc/hypothesis_shared_source_placeholder.png" alt="Universal Normal Embedding illustration"></div>
               <div class="right">
                 <p>
-                  Encoder embeddings and DDIM-inverted diffusion latents can be interpreted as different noisy linear views of a common approximately Gaussian latent representation.
-                  This common source is the Universal Normal Embedding.
+                  We hypothesize that the data domain is linked to a latent Gaussian space, the Universal Normal Embedding (UNE), through an invertible information-preserving mapping.
+                  In this space, semantic properties are simple, in the sense that they are linearly separable.
                 </p>
               </div>
             </div>
           </div>
-
+          
           <div class="card-insight">
-            <div class="upper"><h3>Hypothesis 2: Shared linear semantics</h3></div>
+            <div class="upper"><h3>Hypothesis 2: Induced Normal Embeddings (INE)</h3></div>
             <div class="bottom">
-              <div class="left"><img src="misc/hypothesis_linear_semantics_placeholder.png" alt="Shared linear semantics illustration"></div>
+              <div class="left"><img src="misc/hypothesis_linear_semantics_placeholder.png" alt="Induced Normal Embeddings illustration"></div>
               <div class="right">
                 <p>
-                  If the two spaces arise from the same latent source, semantic attributes should align along linear directions in both.
-                  This predicts consistent linear classification, controllable editing, and transferable structure across encoder and diffusion latents.
+                  We hypothesize that encoder and generative-model latents are induced by the UNE: each latent code is approximately a noisy linear projection of the same underlying Gaussian variable.
+                  As a result, these latent spaces are themselves approximately Gaussian and inherit shared semantic structure.
                 </p>
               </div>
             </div>
@@ -324,7 +324,7 @@
               <div class="left"><img src="misc/insight_linear_classification_placeholder.png" alt="Linear classification illustration"></div>
               <div class="right">
                 <p>
-                  DDIM-inverted diffusion latents support strong linear prediction of semantic attributes, indicating that meaningful structure is directly accessible in the latent space.
+                  Diffusion latents support strong linear prediction of semantic attributes, indicating that meaningful structure is directly accessible in the latent space.
                   This mirrors the linear separability long observed in encoder representations.
                 </p>
               </div>
@@ -393,7 +393,7 @@
           </a>
         </li>
         <li>
-          <a href="https://arxiv.org/abs/2603.14610" target="_blank" rel="noopener">
+          <a href="https://github.com/harel314/SING-analyzing-semantic-invariants-classifiers" target="_blank" rel="noopener">
             Make it SING: Analyzing Semantic Invariants in Classifiers (CVPR 2026)
           </a>
         </li>
